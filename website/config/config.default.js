@@ -24,6 +24,16 @@ module.exports = appInfo => {
     }
   };
 
+  config.cluster={
+    listen:{
+      port:3003,
+      hostname:'127.0.0.1',
+      https:{
+        key:'/etc/ssl/key.pem',
+        cert:'/etc/ssl/cert.pem',
+      }
+    }
+  };
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
